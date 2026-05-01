@@ -26,7 +26,7 @@ def predict_rub_salary_hh(vacancy):
 
     return predict_salary(salary_from, salary_to)
 
-def get_hh_statistics(languages_list):
+def get_hh_statistics(languages):
     hh_url = 'https://api.hh.ru/vacancies'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -34,7 +34,7 @@ def get_hh_statistics(languages_list):
     statistics = {}
     request_count = 0
 
-    for language in languages_list:
+    for language in languages:
         salaries = []
         vacancies_found = 0
         page = 0
@@ -90,13 +90,13 @@ def predict_rub_salary_sj(vacancy):
         vacancy.get('payment_to')
     )    
 
-def get_sj_statistics(languages_list):
+def get_sj_statistics(languages):
     sj_url = 'https://api.superjob.ru/2.0/vacancies/'
     headers = {'X-Api-App-Id': 'v3.r.139766299.22b40a6d45e97a5bfcbd7c61e3620504f166135e.13800b3bbe25ae6b9842bacc8d64cbe37bf4ba74'}
     statistics = {}
     request_count = 0
     
-    for language in languages_list:
+    for language in languages:
         salaries = []
         vacancies_found = 0
         page = 0
