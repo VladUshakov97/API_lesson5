@@ -7,7 +7,15 @@
 ```bash
 pip install -r requirements.txt
 ```
-3. Запустите программу
+## Переменные окружения
+3. Для работы с **SuperJob** требуется API-ключ. Получите его на https://api.superjob.ru.
+Затем создайте файл ```.env``` в папке со скриптом и пропишите:
+```text
+SJ_API_KEY=ваш_ключ
+```
+Для HeadHunter ключ не нужен
+
+4. Запустите программу
 ```bash
 python main.py
 ```
